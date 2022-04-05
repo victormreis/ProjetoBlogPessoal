@@ -18,15 +18,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Tema {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@NotNull	
+	@NotNull
 	private String descricao;
-	
-	@OneToMany(mappedBy = "tema",cascade = CascadeType.ALL)
+
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
-	
+
 	public Long getId() {
 		return id;
 	}

@@ -29,7 +29,7 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
+	public ResponseEntity<Optional<Usuario>> Post(@RequestBody Usuario usuario) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(service.CadastrarUsuario(usuario));
 	}
 
