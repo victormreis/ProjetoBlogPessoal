@@ -37,7 +37,7 @@ public class PostagemController {
 	}
 
 	@GetMapping("/titulo/{titulo}") // Requisição via Titulo da postagem
-	public ResponseEntity<List<org.generation.blogpessoal.model.Postagem>> getByTitulo(@PathVariable String titulo) // captura titulo ou parte do titulo pelo PathVariable														 
+	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) // captura titulo ou parte do titulo pelo PathVariable														 
 	{
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}																									 
@@ -57,7 +57,7 @@ public class PostagemController {
 	}
 
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void delete(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
 

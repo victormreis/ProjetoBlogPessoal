@@ -22,10 +22,11 @@ public class Tema {
 	private Long id;
 	@NotNull	
 	private String descricao;
+	
 	@OneToMany(mappedBy = "tema",cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
-
+	
 	public Long getId() {
 		return id;
 	}
