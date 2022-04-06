@@ -85,4 +85,5 @@ public class Usuario {
 		this.postagens = postagens;
 	}
 
+	
 }

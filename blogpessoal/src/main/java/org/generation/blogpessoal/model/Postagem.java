@@ -32,11 +32,11 @@ public class Postagem {
 	private LocalDateTime data;
 
 	@ManyToOne
-	@JsonIgnoreProperties("Postagem")
+	@JsonIgnoreProperties("postagem")
 	private Tema tema;
 
 	@ManyToOne
-	@JsonIgnoreProperties("Postagem")
+	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
 
 	// Metodos Getters and Setters
@@ -89,4 +89,5 @@ public class Postagem {
 		this.usuario = usuario;
 	}
 
+	
 }
