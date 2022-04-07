@@ -41,6 +41,23 @@ public class Usuario {
 		return id;
 	}
 
+	// metodos construtores para testes
+
+	// construtur cheio
+
+	public Usuario(Long id, String nome, String usuario, String senha, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+
+	// construtur vazio
+	public Usuario() {
+
+	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -85,5 +102,4 @@ public class Usuario {
 		this.postagens = postagens;
 	}
 
-	
 }
