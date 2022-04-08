@@ -54,8 +54,8 @@ public class Usuario {
 	}
 
 	// construtur vazio
-	public Usuario() {
 
+	public Usuario() {
 	}
 
 	public void setId(Long id) {
